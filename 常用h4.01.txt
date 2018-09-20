@@ -1,0 +1,243 @@
+一、大体格式
+<!Doctype html>
+   <html>
+      <head>
+           <title>标题</title>
+            <meta charset="utf-8">（记事本为gb2312)
+         <body>
+       
+         </body>
+      </head>
+   </html>
+
+二、
+
+1.超链接标记
+     <a href="要访问的资源地址" target="_self默认本窗口覆盖显示/_blank新窗口显示/框架名-指定框架中显示" title="提示信息"></a>
+
+        邮件超链接:点击邮件超链接，会自动打开你电脑上邮件发送软件，将收件人地址自动填充（foxmail ）
+         <a href="mailto:asdfs@asdf.com"></a>
+  
+        锚链接（书签链接）:
+        访问链接<a href="url#name"></a>
+        定义锚点:<a name="锚名"></a>
+
+
+2.<br>  换行
+
+3.&nbsp;  空格
+
+4.<meta http-equiv="refresh"content="10">  refresh设定本网页自动刷新时间间隔秒数（10秒）
+
+5.<meta http-equiv="refresh"content="10";url=http://www.baidu.com>   设定本网页十秒后跳转到其他界面或网页
+
+6.网站前端三层 (x)html 结构层--html结构    css   表现层--决定html的样式  javascript 动作层--决定html如何交互
+
+7.HTML基本语法:
+   <标记名 属性="值" 属性="值" ></标记名>
+   
+  举例子:
+    <font color="red" size="7" face="隶书">
+      我是帅哥
+    </font>
+
+8.标记的属性和标记不能分离
+  一说属性必须得说哪一个标记的属性，属性不能单独说
+   <font color="" face=" size="" ></font>
+
+   <p align=""></p>
+
+9.HTML里面的注释
+
+   <!-- -->
+
+说明:注释是给程序员看的
+
+10.规范:
+--标记和属性全部小写
+--属性值必须加""
+--双标记必须双着用
+--单标记必须关闭 <img /> <input />
+--标记只能嵌套不能交叉
+
+11.文字标记
+ <font color="文字颜色" face="字体名称" size="1-7文字大小默认3"></font>
+
+12.文字修饰标记
+  加粗  <b></b> <strong></strong>
+  倾斜  <i></i>  <em></em>
+  下划线 <u></u>
+  删除线<del></del>
+  地址<address></address>
+  上标 <sup></sup>
+  下标 <sub></sub>
+
+13.段落标记:一个p相当于一个回车换行，/p相当于一个回车换行
+   <p align="水平对齐方式left默认/center/right"></p>
+
+14.横线:
+  <hr width="宽度" size="粗细" color="颜色" align="水平对齐方式left/center默认/right" noshade是否有阴影>
+
+15.预格式化:保留源代码中空格，不忽略源代码中的空格
+   <pre></pre>
+
+16.忽略HTML标记<xmp></xmp>
+
+17.设置段落缩进<blockquote></blockquote> 
+
+18.
+无序列表   ul
+有序列表   ol
+定义列表   dl
+目录列表   dir
+菜单列表   menu
+
+无序列表
+<ul type="disc/circle/square">
+   <li type="disc/circle/square">
+</li>
+</ul>
+
+有序列表
+<ol type="1/A/a/i/I" start="从第几项开始">
+<li>
+</li>
+</ol>
+
+定义列表:
+   <dl>
+      <dt>定义</dt>
+      <dd>解释1</dd>
+      <dd>解释2</dd>
+      <dd>解释3</dd>
+      <dt>定义</dt>
+      <dd>解释1</dd>
+      <dd>解释2</dd>
+      <dd>解释3</dd>
+      <dt>定义</dt>
+      <dd>解释1</dd>
+      <dd>解释2</dd>
+      <dd>解释3</dd>
+   </dl>
+
+19.<img src="图片来源" alt="替换文本" title="全局属性每个标记都会有提示信息" align="图片水平对齐方式left默认/right-----top/middle/bottom图片后面文字的对齐方式" width="像素/百分比" height="像素/百分比">  
+说明：路径分为  相对路径（从当前文档开始）
+                绝对路径（从盘符开始）---不可能用
+
+20.移动<marquee bgcolor="背景颜色" behavior="slide一次/scroll循环/alternate来回动" scrollamount="速度" scrolldelay="延迟" direction="移动方向left默认/right/up/down"/></marquee>
+
+21.单元格<tr>行</tr><td>列</td>
+   <table border="表格边框" width="表格宽度" height="表格高度" bgcolor="背景颜色" background="表格背景图片"cellspacing="单元格之间的距离" cellpadding="单元格里边的内容距离边框的距离" align="表格对齐方式">
+     <tr align="单元格中水平对齐方式
+left/center/right" valign="单元格中内容垂直对齐方式top/middle/bottom ">
+         <td colspan="跨列合并单元格" rowspan="跨行合并单元格"></td>
+         <td></td>
+         <td></td>
+     </tr>
+     <tr><td></td>
+         <td></td>
+         <td></td>
+     </tr>
+    </table>
+
+
+22.框架集和框架
+    <frameset cois="竖着分割" rows="横着分割"/>
+        <frame name="框架的名字" src="连接的资源"/>
+        <frame name="框架的名字" src="链接的资源"/>
+    </frameset>
+
+     例子:<frameset rows="25,75/*">
+             <frame name="  " src="  "/>
+          </frameset>
+
+      浮动框架：讲一个独立的HTML页面嵌入到当前页面中
+      <iframe name=""src="" width="" height=""></iframe>
+
+23.<form name="表单名称" action="数据提交到的地址/脚本/页面" method="get默认/post"></from>
+
+     ※ method="get/post"
+        相同点：都是数据提交的方式，提交的数据是相同的
+        不同点：
+             ①get原理 ：数据和HTML文档的头部<head></head>信息一起提交
+                  特点 ：大小受到文档头部大小限制
+                         数据附加到url？后面
+             ②post原理：数据和HTML文档正文<body></body>之间信息一起提交
+                   特点：大小没有限制
+                         数据不会附加到url？后面
+说明：什么是数据？答：数据是用户填写的或选择的表单项（信息）
+
+    表单项：表单里面的项目
+    输入元素：<input type="text默认"/>输入文本框
+                             "password"密码框
+                             "radio"单选按钮
+                             "checkbox"复选框
+                             "file"文件域
+                             "image"图像域
+                             "hidden"隐藏域
+                             "button"按钮
+                             "reset"重置
+                             "submit"提交
+    <select></select>      <textarea></textarea>
+
+            (1)输入文本框：<input type="text" name="" value="默认值" max-length="最大字符数" size="多少个字符的宽度" readonly只读 disabled禁用/>
+            (2)密码框：<input type="password" name="" max-length="" size="" readonly disabled/>
+            (3)单选按钮：单选按钮要是同一组的 那么name值相同；如果不同，name值不同。
+                         <input type="radio" name="ri" value="">提示
+                         <input type="radio" name="ri" value="">提示
+            (4)复选框：多选，name值相同也行，不同也行<input type="checkbox" name="" value="">
+            (5)文件域：<input type="file" name="">
+            (6)图像域：代替submit样子，如果你觉得submit不好看，那么你可以使用PS做一个图代替submit。<input type="image" src="">
+            (7)按钮：<input type="button" name="" value="按钮"> 
+            (8)重置按钮：将所有表单项重置为默认值而不是清空<input type="reset" name="" value="">
+            (9)提交按钮：点击提交按钮后浏览器自动将表单项数据发送给action所以所指地址<input type="submit" name="sub" value="">
+            (10)select标签；单选下拉菜单和多选列表
+                ①单选下拉菜单：
+                  <select name="">
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                  </select>
+                ②多选列表
+                  <select name="" size="大小" multiple多选ctrl shift>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                  </select>
+              (11)文本域：例如新浪微博，发表微博。百度贴吧，发布帖子
+                  <textarea name="" cols="多少个字符宽度" rows="多少个字符高度"><>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
